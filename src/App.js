@@ -1,9 +1,9 @@
 import "./App.css";
-import Header from "./components/Header.js";
+import NavBar from "./components/Navbar";
 function App() {
   return (
-    <div className="App">
-      <Header />
+    <div>
+      <NavBar />
     </div>
   );
 }
