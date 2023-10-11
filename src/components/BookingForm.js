@@ -6,14 +6,22 @@ function BookinForm() {
   const [guest, setGuest] = useState("");
   const [occasion, setOccasion] = useState("");
 
+  // handleSubmit(event){
+  //   ValidityState(value);
+  //   event.preventDefault();
+  // }
   const handleSubmit = (e) => {
+    console.log("form submitted");
     e.preventDefault();
-    // props.SubmitForm(e);
+    setDate("");
+    setGuest("");
+    setOccasion("");
   };
 
+  // add handleSubmit if guest are more than 6 people
+  /* if (Number(guests) >=6 ) alert("A service charge of 18% will be added") return"*/
   const handleChange = (e) => {
     setDate(e);
-    // props.dispatch(e);
   };
 
   return (
@@ -27,8 +35,8 @@ function BookinForm() {
               <input
                 id="book-date"
                 value={date}
-                onChange={(e) => handleChange(e.target.value)}
-                type="data"
+                onChange={(e) => setDate(e.target.value)}
+                type="date"
                 required
               />
             </div>
@@ -42,7 +50,16 @@ function BookinForm() {
                 required
                 onChange={(e) => setTime(e.target.value)}
               >
+                {/* The options in the booking time field should be displayed from a list of available times.
+                For now, create a stateful array in the component named 
+                availableTimes and use this state variable to populate the time select field options. */}
                 <option value="">Select Time</option>
+                <option>17:00</option>
+                <option>18:00</option>
+                <option>19:00</option>
+                <option>20:00</option>
+                <option>21:00</option>
+                <option>22:00</option>
                 {/* {props.availableTimes.availableTimes.map((availableTimes) => {
                   return <option key={availableTimes}>{availableTimes} </option>;
                 })} */}
@@ -75,6 +92,8 @@ function BookinForm() {
                 <option>Event</option>
               </select>
             </div>
+
+            {/* Add email? */}
 
             <div className="btnReceive">
               <input
