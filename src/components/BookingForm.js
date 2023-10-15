@@ -53,6 +53,9 @@ function BookinForm() {
                 {/* The options in the booking time field should be displayed from a list of available times.
                 For now, create a stateful array in the component named 
                 availableTimes and use this state variable to populate the time select field options. */}
+
+                {/* TODO: lift up available times state to the Main component
+                TODO: Change the available time to use a reducer */}
                 <option value="">Select Time</option>
                 <option>17:00</option>
                 <option>18:00</option>
@@ -88,8 +91,6 @@ function BookinForm() {
               >
                 <option>Birthday</option>
                 <option>Anniversary</option>
-                <option>Bridal</option>
-                <option>Event</option>
               </select>
             </div>
 
