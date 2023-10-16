@@ -1,27 +1,22 @@
 import React, { useState } from "react";
 
-function BookinForm() {
+function BookingForm(props) {
   const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
+  const [times, setTime] = useState("");
   const [guest, setGuest] = useState("");
   const [occasion, setOccasion] = useState("");
 
-  // handleSubmit(event){
-  //   ValidityState(value);
-  //   event.preventDefault();
-  // }
   const handleSubmit = (e) => {
     console.log("form submitted");
     e.preventDefault();
-    setDate("");
-    setGuest("");
-    setOccasion("");
+    props.SubmitForm(e);
   };
 
   // add handleSubmit if guest are more than 6 people
   /* if (Number(guests) >=6 ) alert("A service charge of 18% will be added") return"*/
   const handleChange = (e) => {
     setDate(e);
+    props.dispatch(e);
   };
 
   return (
@@ -35,7 +30,7 @@ function BookinForm() {
               <input
                 id="book-date"
                 value={date}
-                onChange={(e) => setDate(e.target.value)}
+                onChange={(e) => handleChange(e.target.value)}
                 type="date"
                 required
               />
@@ -45,7 +40,7 @@ function BookinForm() {
               <label htmlFor="book-time">Choose Time</label>
               <select
                 id="book-time"
-                value={time}
+                value={times}
                 type="string"
                 required
                 onChange={(e) => setTime(e.target.value)}
@@ -53,19 +48,23 @@ function BookinForm() {
                 {/* The options in the booking time field should be displayed from a list of available times.
                 For now, create a stateful array in the component named 
                 availableTimes and use this state variable to populate the time select field options. */}
-
-                {/* TODO: lift up available times state to the Main component
-                TODO: Change the available time to use a reducer */}
+                {/*
+                TODO: Change the available time to use a reducer
+                Pass down the state and state changing functions from the Main component to 
+                the BookingForm component using props in order to make state work across different components.
+                 Move the availableTimes useState hook from the BookingForm component into the Main component */}
                 <option value="">Select Time</option>
-                <option>17:00</option>
+                {/* <option>17:00</option>
                 <option>18:00</option>
                 <option>19:00</option>
                 <option>20:00</option>
                 <option>21:00</option>
-                <option>22:00</option>
-                {/* {props.availableTimes.availableTimes.map((availableTimes) => {
-                  return <option key={availableTimes}>{availableTimes} </option>;
-                })} */}
+                <option>22:00</option> */}
+                {props.availableTimes.availableTimes.map((availableTimes) => {
+                  return (
+                    <option key={availableTimes}>{availableTimes} </option>
+                  );
+                })}
               </select>
             </div>
             {/* GUESTS */}
@@ -110,4 +109,4 @@ function BookinForm() {
   );
 }
 
-export default BookinForm;
+export default BookingForm;
