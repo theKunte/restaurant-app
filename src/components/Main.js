@@ -11,14 +11,13 @@ function Main(props) {
     var s = seed % m;
     return function () {
       s = (s * a) % m;
-      return s / m;
     };
   };
 
   const fetchAPI = function (date) {
     let result = [];
-    let random = seedRandom(date.getTime()); // Use getTime() to get a numeric seed
-    for (let i = 15; i <= 22; i++) {
+    let random = seedRandom(date.getDate()); // Use getTime() to get a numeric seed
+    for (let i = 17; i <= 23; i++) {
       if (random() < 0.5) {
         result.push(i + ":00");
       }

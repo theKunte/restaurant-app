@@ -1,11 +1,5 @@
 import React from "react";
 
-// In the Main component, set
-// up a function named submitForm that accepts the form data
-// as a parameter and will submit it to the submitAPI (formData) API set up in the previous exercise.
-// If the submitAPI(formData)
-//  API call returns true, navigate to the booking confirmed page.
-
 // Tip: You can use the  useNavigate() hookto navigate via code.
 const ConfirmedBooking = () => {
   return (

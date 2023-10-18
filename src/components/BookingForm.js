@@ -16,6 +16,7 @@ function BookingForm(props) {
   // add handleSubmit if guest are more than 6 people
   /* if (Number(guests) >=6 ) alert("A service charge of 18% will be added") return"*/
   const handleChange = (e) => {
+    // console.log(props);
     setDate(e);
     props.dispatch(e);
   };
@@ -31,7 +32,7 @@ function BookingForm(props) {
               <input
                 id="book-date"
                 value={date}
-                onChange={(e) => handleChange(e.target.value)}
+                onChange={handleChange}
                 type="date"
                 required
               />
@@ -47,11 +48,11 @@ function BookingForm(props) {
                 onChange={(e) => setTime(e.target.value)}
               >
                 <option value="">Select Time</option>
-                {/* {props.availableTimes.availableTimes.map((availableTimes) => {
+                {props.availableTimes.availableTimes.map((availableTimes) => {
                   return (
                     <option key={availableTimes}>{availableTimes} </option>
                   );
-                })} */}
+                })}
               </select>
             </div>
             {/* GUESTS */}

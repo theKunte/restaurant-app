@@ -1,7 +1,8 @@
 import React from "react";
 import BookingForm from "./BookingForm";
 
-const BookingPage = (props) => {
+function BookingPage(props) {
+  console.log(props);
   return (
     <BookingForm
       availableTimes={props.availableTimes}
@@ -9,6 +10,6 @@ const BookingPage = (props) => {
       submitForm={props.submitForm}
     />
   );
-};
+}
 
 export default BookingPage;
