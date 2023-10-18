@@ -5,11 +5,12 @@ function BookingForm(props) {
   const [times, setTime] = useState("");
   const [guest, setGuest] = useState("");
   const [occasion, setOccasion] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
     console.log("form submitted");
     e.preventDefault();
-    props.SubmitForm(e);
+    props.submitForm(e);
   };
 
   // add handleSubmit if guest are more than 6 people
@@ -45,26 +46,12 @@ function BookingForm(props) {
                 required
                 onChange={(e) => setTime(e.target.value)}
               >
-                {/* The options in the booking time field should be displayed from a list of available times.
-                For now, create a stateful array in the component named 
-                availableTimes and use this state variable to populate the time select field options. */}
-                {/*
-                TODO: Change the available time to use a reducer
-                Pass down the state and state changing functions from the Main component to 
-                the BookingForm component using props in order to make state work across different components.
-                 Move the availableTimes useState hook from the BookingForm component into the Main component */}
                 <option value="">Select Time</option>
-                {/* <option>17:00</option>
-                <option>18:00</option>
-                <option>19:00</option>
-                <option>20:00</option>
-                <option>21:00</option>
-                <option>22:00</option> */}
-                {props.availableTimes.availableTimes.map((availableTimes) => {
+                {/* {props.availableTimes.availableTimes.map((availableTimes) => {
                   return (
                     <option key={availableTimes}>{availableTimes} </option>
                   );
-                })}
+                })} */}
               </select>
             </div>
             {/* GUESTS */}
@@ -79,7 +66,7 @@ function BookingForm(props) {
               />
             </div>
 
-            {/* OCCATION */}
+            {/* OCCATS==ON */}
             <div>
               <label htmlFor="book-occasion">Occasion:</label>
               <select
@@ -93,7 +80,19 @@ function BookingForm(props) {
               </select>
             </div>
 
-            {/* Add email? */}
+            <div>
+              <label htmlFor="book-email">Email:</label>
+              <select
+                id="book-email"
+                key={email}
+                value={email}
+                required
+                onChange={(e) => setEmail(e.target.value)}
+              >
+                <option>Birthday</option>
+                <option>Anniversary</option>
+              </select>
+            </div>
 
             <div className="btnReceive">
               <input

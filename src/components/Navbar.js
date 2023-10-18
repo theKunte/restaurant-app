@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import logo from "../images/Logo.svg";
 
 function Navbar() {
@@ -33,10 +33,16 @@ function Navbar() {
           <a href="/">Menu</a>
         </li>
         <li>
-          <a href="/">Order</a>
+          <a href="/">Services</a>
+        </li>
+        <li>
+          <a href="/">Order online</a>
         </li>
         <li>
           <a href="/">Reservation</a>
+        </li>
+        <li>
+          <a href="/">Login</a>
         </li>
       </ul>
     </nav>

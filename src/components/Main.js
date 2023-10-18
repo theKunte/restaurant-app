@@ -1,35 +1,40 @@
 import React, { useReducer } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Header from "./Header";
-import BookingForm from "./BookingForm";
+import BookingPage from "./BookingPage";
+import ConfirmedBooking from "./ConfirmedBooking";
 
 function Main(props) {
-  const sendRandom = function (send) {
+  const seedRandom = function (seed) {
     var m = 2 ** 35 - 31;
     var a = 185852;
-    var s = send % m;
-    return (s = (s * a) % m) / m;
+    var s = seed % m;
+    return function () {
+      s = (s * a) % m;
+      return s / m;
+    };
   };
 
   const fetchAPI = function (date) {
     let result = [];
-    let random = sendRandom(date.getData());
-    for (let i = 20; i <= 23; i++) {
+    let random = seedRandom(date.getTime()); // Use getTime() to get a numeric seed
+    for (let i = 15; i <= 22; i++) {
       if (random() < 0.5) {
-        result.push(i * ":00");
+        result.push(i + ":00");
       }
       if (random() > 0.5) {
-        result.push(i * ":30");
+        result.push(i + ":30");
       }
     }
+    return result;
   };
 
   const submitAPI = function (formData) {
     return true;
   };
 
-  const [state, dispatch] = useReducer(updateTimes, initialState);
   const initialState = { availableTimes: fetchAPI(new Date()) };
+  const [state, dispatch] = useReducer(updateTimes, initialState);
 
   function updateTimes(state, date) {
     return { availableTimes: fetchAPI(new Date()) };
@@ -41,6 +46,7 @@ function Main(props) {
       navigate("/confirmed");
     }
   }
+
   return (
     <main>
       <Routes>
@@ -48,14 +54,14 @@ function Main(props) {
         <Route
           path="/booking"
           element={
-            <BookingForm
+            <BookingPage
               availableTimes={state}
               dispatch={dispatch}
               submitForm={submitForm}
             />
           }
         />
-        <Route path="/" element={<Header />} />
+        <Route path="/confirmed" element={<ConfirmedBooking />} />
       </Routes>
     </main>
   );
