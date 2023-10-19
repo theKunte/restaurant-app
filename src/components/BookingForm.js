@@ -17,7 +17,9 @@ function BookingForm(props) {
   /* if (Number(guests) >=6 ) alert("A service charge of 18% will be added") return"*/
   const handleChange = (e) => {
     // console.log(props);
-    setDate(e);
+    setDate(e.target.value);
+    setTime(e.target.value);
+
     props.dispatch(e);
   };
 
