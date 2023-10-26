@@ -3,36 +3,27 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import Header from "./Header";
 import BookingPage from "./BookingPage";
 import ConfirmedBooking from "./ConfirmedBooking";
+import seedrandom from "seedrandom"; // Import the seedrandom library
+
+// Define the fetchAPI function before using it.
+function fetchAPI(date) {
+  let result = [];
+  const seedRandom = seedrandom(date.getDate());
+  for (let i = 12; i <= 23; i++) {
+    if (seedRandom() < 0.5) {
+      result.push(i + ":00");
+    }
+    if (seedRandom() > 0.5) {
+      result.push(i + ":30");
+    }
+  }
+  return result;
+}
 
 function Main(props) {
-  const seedRandom = function (seed) {
-    var m = 2 ** 35 - 31;
-    var a = 185852;
-    var s = seed % m;
-    return function () {
-      s = (s * a) % m;
-    };
-  };
-
-  const fetchAPI = function (date) {
-    let result = [];
-    let random = seedRandom(date.getDate()); // Use getTime() to get a numeric seed
-    for (let i = 17; i <= 23; i++) {
-      if (random() < 0.5) {
-        result.push(i + ":00");
-      }
-      if (random() > 0.5) {
-        result.push(i + ":30");
-      }
-    }
-    return result;
-  };
-
   const submitAPI = function (formData) {
     return true;
   };
-
-  // const initialState = { availableTimes: [fetchAPI(new Date())] };
 
   const initialState = { availableTimes: fetchAPI(new Date()) };
   const [state, dispatch] = useReducer(updateTimes, initialState);
