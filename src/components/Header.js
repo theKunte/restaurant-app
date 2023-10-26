@@ -1,5 +1,6 @@
 import React from "react";
 import bannerImage from "../images/restauranfood.jpg";
+import { Link } from "react-router-dom";
 function Header() {
   return (
     <header className="header">
@@ -8,7 +9,9 @@ function Header() {
           <h1>Little Lemon</h1>
           <h2>Seattle</h2>
           <p>We are a family restaurant....</p>
-          <button aria-label="On Click">Reserve Table</button>
+          <Link to="/booking">
+            <button aria-label="On Click">Reserve Table</button>
+          </Link>
         </div>
 
         <div className="banner-img">

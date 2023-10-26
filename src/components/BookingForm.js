@@ -23,6 +23,12 @@ function BookingForm(props) {
     props.dispatch(e);
   };
 
+  // For each form input field, consider what HTML5 validation can be applied.
+  //  For example, the user should not be able to reserve a table for less than one person.
+
+  //  -  the submit button should be disabled if the form input fields are invalid.
+  //  - Use events to detect field changes and submit button clicks.
+
   return (
     <header>
       <section>
@@ -41,13 +47,12 @@ function BookingForm(props) {
             </div>
             {/* TIME */}
             <div>
-              <label htmlFor="book-time">Choose Time</label>
+              <label htmlFor="book-time">Choose Time:</label>
               <select
                 id="book-time"
                 value={times}
-                type="string"
-                required
                 onChange={(e) => setTime(e.target.value)}
+                required
               >
                 <option value="">Select Time</option>
                 {props.availableTimes.availableTimes.map((availableTimes) => {
