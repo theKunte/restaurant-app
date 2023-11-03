@@ -3,9 +3,8 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import Header from "./Header";
 import BookingPage from "./BookingPage";
 import ConfirmedBooking from "./ConfirmedBooking";
-import seedrandom from "seedrandom"; // Import the seedrandom library
+import seedrandom from "seedrandom";
 
-// Define the fetchAPI function before using it.
 function fetchAPI(date) {
   let result = [];
   const seedRandom = seedrandom(date.getDate());

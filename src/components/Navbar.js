@@ -32,14 +32,12 @@ function Navbar() {
         <li>
           <a href="/">Menu</a>
         </li>
-        <li>
-          <a href="/">Services</a>
-        </li>
+
         <li>
           <a href="/">Order online</a>
         </li>
         <li>
-          <a href="/">Reservation</a>
+          <a href="/">Reservations</a>
         </li>
         <li>
           <a href="/">Login</a>
