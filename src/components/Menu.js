@@ -10,16 +10,18 @@ const Menu = () => {
       </div>
 
       {/* menu items */}
-      <div>
+      <div className="cards">
         {menuItmes.map((recipe) => (
-          <div key={recipe.id}>
-            <img src={recipe.image} alt=""></img>
-            <div>
-              <h5>{recipe.title}</h5>
-              <p>{recipe.price}</p>
+          <div key={recipe.id} className="menu-items">
+            <img src={recipe.image} alt="" />
+            <div className="menu-content">
+              <div className="heading">
+                <h5>{recipe.title}</h5>
+                <p>{recipe.price}</p>
+              </div>
+              <p>{recipe.description}</p>
+              <button className="orderbtn">Order Now</button>
             </div>
-            <p>{recipe.description}</p>
-            <button className="orderBtn">Order Now</button>
           </div>
         ))}
       </div>
