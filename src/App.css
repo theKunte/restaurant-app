@@ -39,7 +39,7 @@ nav ul li a:hover {
 }
 ul li {
   display: inline; /* Display list items horizontally */
-  margin-right: 10px; /* Add spacing between list items (adjust as needed) */
+  margin-right: 20px; /* Add spacing between list items (adjust as needed) */
 }
 
 .nav-links {
@@ -183,7 +183,7 @@ label {
 .menu-items {
   /* height: 400px; */
   width: 350px;
-  background: #a9c8be;
+  background: #edefee;
   border-radius: 8px;
 }
 
@@ -210,6 +210,7 @@ label {
 }
 
 footer section {
+  background-color: #495e57;
   padding: 10px 13%;
   display: flex;
   justify-content: space-between;
@@ -292,6 +293,7 @@ footer ul li {
   }
 
   footer section {
+    background-color: #495e57;
     padding: 10px 8%;
     flex-direction: column;
   }
