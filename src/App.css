@@ -12,7 +12,7 @@ a {
 }
 
 .navbar {
-  padding: 10px 13%;
+  padding: 10px 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -239,6 +239,22 @@ footer ul li {
   padding: 8px 0;
 }
 
+.footer-ul {
+  display: flex;
+  flex-direction: column;
+}
+
+footer section {
+  background-color: #495e57;
+  padding: 10px 13%;
+  flex-direction: row;
+}
+
+footer section > div {
+  flex: 1;
+  padding: 0 10px;
+}
+
 @media screen and (max-width: 768px) {
   .menu-icon {
     display: block;
@@ -257,7 +273,7 @@ footer ul li {
 
   .navbar {
     background: #fff;
-    padding: 10px 8%;
+    padding: 10px 5%;
   }
 
   nav ul li a {
