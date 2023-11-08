@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function BookingForm(props) {
   const [date, setDate] = useState("");
@@ -6,12 +6,24 @@ function BookingForm(props) {
   const [guest, setGuest] = useState("");
   const [occasion, setOccasion] = useState("");
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
 
   const handleSubmit = (e) => {
     console.log("form submitted");
     e.preventDefault();
     props.submitForm(e);
   };
+  useEffect(() => {
+    // Calculate the minimum allowed date as the next day
+    const today = new Date();
+    today.setDate(today.getDate() + 1);
+
+    // Format the date as "YYYY-MM-DD" (compatible with the date input)
+    const minDate = today.toISOString().split("T")[0];
+
+    // Set the minimum date for the input field
+    document.getElementById("book-date").min = minDate;
+  }, []);
 
   // add handleSubmit if guest are more than 6 people
   /* if (Number(guests) >=6 ) alert("A service charge of 18% will be added") return"*/
@@ -34,6 +46,31 @@ function BookingForm(props) {
       <section>
         <form onSubmit={handleSubmit}>
           <fieldset>
+            {/* Name */}
+            <div>
+              <label htmlFor="guest-name">Full Name*</label>
+              <input
+                id="guest-name"
+                value={name}
+                type="text"
+                required
+                pattern="^[A-Za-z\s]+$"
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
+
+            {/*Email */}
+            <div>
+              <label htmlFor="book-email">Email:</label>
+              <input
+                id="book-email"
+                key={email}
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              ></input>
+            </div>
             {/* DATE */}
             <div>
               <label htmlFor="book-date">Choose Date</label>
@@ -68,13 +105,14 @@ function BookingForm(props) {
               <input
                 id="book-guest"
                 value={guest}
-                type="int"
+                type="number"
                 required
+                min="1"
                 onChange={(e) => setGuest(e.target.value)}
               />
             </div>
 
-            {/* OCCATS==ON */}
+            {/* OCCASION */}
             <div>
               <label htmlFor="book-occasion">Occasion:</label>
               <select
@@ -87,21 +125,6 @@ function BookingForm(props) {
                 <option>Anniversary</option>
               </select>
             </div>
-
-            <div>
-              <label htmlFor="book-email">Email:</label>
-              <select
-                id="book-email"
-                key={email}
-                value={email}
-                required
-                onChange={(e) => setEmail(e.target.value)}
-              >
-                <option>Birthday</option>
-                <option>Anniversary</option>
-              </select>
-            </div>
-
             <div className="btnReceive">
               <input
                 arial-label="on Click"

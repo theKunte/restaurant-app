@@ -37,7 +37,7 @@ function Navbar() {
           <a href="/">Order online</a>
         </li>
         <li>
-          <a href="/">Reservations</a>
+          <a href="/booking">Reservations</a>
         </li>
         <li>
           <a href="/">Login</a>

@@ -13,27 +13,18 @@ function Footer() {
           </p>
         </div>
         <div>
-          <h3>Quick Links</h3>
+          <h3>HOURS</h3>
           <ul className="footer-ul">
             <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/">About</a>
-            </li>
-            <li>
-              <a href="/">Reservations</a>
-            </li>
-            <li>
-              <a href="/">Order Online</a>
-            </li>
-            <li>
-              <a href="/">Login</a>
+              Hours:
+              <br />
+              Tuesday-Sunday: 3:00PM-10:00PM
             </li>
           </ul>
         </div>
+
         <div>
-          <h3>Contact</h3>
+          <h3>CONTACT</h3>
           <ul className="footer-ul">
             <li>
               Address: <br /> 1st Ave Seattle, WA
@@ -48,8 +39,9 @@ function Footer() {
             </li>
           </ul>
         </div>
+
         <div>
-          <h3>CONNECT WITH US</h3>
+          <h3>CONNECT WITH US!</h3>
           <ul className="footer-ul">
             <li>
               <a href="/">Facebook</a>
@@ -63,6 +55,11 @@ function Footer() {
           </ul>
         </div>
       </section>
+      <div>
+        <p className="footer-copyright">
+          © 2023 Little Lemon Ltd. All rights reserved.
+        </p>
+      </div>
     </footer>
   );
 }
