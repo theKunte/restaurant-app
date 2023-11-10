@@ -9,7 +9,6 @@ function BookingForm(props) {
   const [name, setName] = useState("");
 
   const handleSubmit = (e) => {
-    console.log("form submitted");
     e.preventDefault();
     props.submitForm(e);
   };
@@ -92,7 +91,8 @@ function BookingForm(props) {
                 required
               >
                 <option value="">Select Time</option>
-                {props.availableTimes.availableTimes.map((availableTimes) => {
+
+                {props.availableTimes?.availableTimes.map((availableTimes) => {
                   return (
                     <option key={availableTimes}>{availableTimes} </option>
                   );

@@ -2,7 +2,6 @@ import React from "react";
 import BookingForm from "./BookingForm";
 
 function BookingPage(props) {
-  console.log(props);
   return (
     <BookingForm
       availableTimes={props.availableTimes}

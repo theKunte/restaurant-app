@@ -4,16 +4,47 @@ import BookingForm from "./components/BookingForm";
 
 //TODO fix tests
 
-describe("BookingForm Component", () => {
-  it("renders without crashing", () => {
+describe("BookingForm", () => {
+  it("renders BookingForm component", () => {
     render(<BookingForm />);
-    expect(screen.getByRole("form")).toBeInTheDocument();
+    // Check if the form elements are rendered
+    expect(screen.getByLabelText("Full Name*")).toBeInTheDocument();
+    expect(screen.getByLabelText("Email:")).toBeInTheDocument();
+    expect(screen.getByLabelText("Choose Date")).toBeInTheDocument();
+    expect(screen.getByLabelText("Choose Time:")).toBeInTheDocument();
+    expect(screen.getByLabelText("Number of Guests")).toBeInTheDocument();
+    expect(screen.getByLabelText("Occasion:")).toBeInTheDocument();
+    expect(screen.getByText("Complete Reservation!")).toBeInTheDocument();
   });
 
-  it("updates date state when date input changes", () => {
-    render(<BookingForm />);
-    const dateInput = screen.getByLabelText("Choose Date");
-    fireEvent.change(dateInput, { target: { value: "2023-11-15" } });
-    expect(dateInput).toHaveValue("2023-11-15");
+  it("submits form when submit button is clicked", () => {
+    const mockSubmitForm = jest.fn();
+    render(<BookingForm submitForm={mockSubmitForm} />);
+
+    // Simulate user input
+    fireEvent.change(screen.getByLabelText("Full Name*"), {
+      target: { value: "John Doe" },
+    });
+    fireEvent.change(screen.getByLabelText("Email:"), {
+      target: { value: "john@example.com" },
+    });
+    fireEvent.change(screen.getByLabelText("Choose Date"), {
+      target: { value: "2023-14-10" },
+    });
+    fireEvent.change(screen.getByLabelText("Choose Time:"), {
+      target: { value: "12:00 PM" },
+    });
+    fireEvent.change(screen.getByLabelText("Number of Guests"), {
+      target: { value: "2" },
+    });
+    fireEvent.change(screen.getByLabelText("Occasion:"), {
+      target: { value: "Birthday" },
+    });
+
+    // Trigger form submission
+    fireEvent.click(screen.getByText("Complete Reservation!"));
+
+    // Check if the submit function is called with the correct arguments
+    expect(mockSubmitForm).toHaveBeenCalledWith(expect.anything());
   });
 });
