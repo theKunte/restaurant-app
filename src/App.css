@@ -169,7 +169,7 @@ label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 }
 .cards {
   margin-top: 30px;
@@ -305,7 +305,7 @@ footer section > div {
     margin: 20px 0;
   }
   .menu-header {
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 
   .menu-items {

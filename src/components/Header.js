@@ -8,7 +8,11 @@ function Header() {
         <div className="banner">
           <h1>Little Lemon</h1>
           <h2>Seattle</h2>
-          <p>We are a family restaurant....</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud
+          </p>
           <Link to="/booking">
             <button aria-label="On Click">Reserve Table</button>
           </Link>
