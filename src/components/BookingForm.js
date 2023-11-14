@@ -63,7 +63,6 @@ function BookingForm(props) {
               <label htmlFor="book-email">Email:</label>
               <input
                 id="book-email"
-                key={email}
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}

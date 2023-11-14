@@ -1,6 +1,11 @@
 import React from "react";
 import logo from "../images/littlelemonlogo2.png";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faInstagram,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 function Footer() {
   return (
     <footer>
@@ -44,13 +49,19 @@ function Footer() {
           <h3>CONNECT WITH US!</h3>
           <ul className="footer-ul">
             <li>
-              <a href="/">Facebook</a>
+              <a className="links" href="http://www.facebook.com/">
+                <FontAwesomeIcon icon={faFacebook} size="1x" color="white" />
+              </a>
             </li>
             <li>
-              <a href="/">Instagram</a>
+              <a className="links" href="/https://www.instagram.com/">
+                <FontAwesomeIcon icon={faInstagram} size="1x" color="white" />
+              </a>
             </li>
             <li>
-              <a href="/">Twitter</a>
+              <a className="links" href="/https://twitter.com/">
+                <FontAwesomeIcon icon={faTwitter} size="1x" color="white" />
+              </a>
             </li>
           </ul>
         </div>
