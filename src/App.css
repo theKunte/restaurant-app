@@ -291,6 +291,73 @@ footer section > div {
   color: #edefee;
 }
 
+/* Testing Form Styles */
+
+/* Add this CSS to your stylesheet */
+.booking header {
+  background-color: #edefee;
+  padding: 10px;
+  text-align: center;
+}
+
+.booking section {
+  width: 100px;
+  margin: 0 auto;
+}
+
+form {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+fieldset {
+  border: none;
+}
+
+div {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23212121"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+}
+
+.btnReceive input {
+  background-color: #495e57;
+  color: #edefee;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btnReceive input:hover {
+  background-color: #f4ce14;
+  color: #333333;
+}
+
 @media screen and (max-width: 768px) {
   .menu-icon {
     display: block;
