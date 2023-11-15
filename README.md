@@ -1,3 +1,17 @@
+# Welcome to Little Lemon Restaurant! 
+
+This project was created with react, little lemon is a restaurant app that allows users to make online reservations:
+
+![image](https://github.com/theKunte/restaurant-app-project/assets/32443542/24cbe688-92e9-49a6-b98d-f487660ce493)
+
+![image](https://github.com/theKunte/restaurant-app-project/assets/32443542/fd755efd-0136-4a09-a79a-d0231070632a)
+
+![image](https://github.com/theKunte/restaurant-app-project/assets/32443542/9061a636-f11a-456e-a6df-4dcb6f4df0d6)
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
