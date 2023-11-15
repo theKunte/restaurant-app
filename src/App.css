@@ -33,14 +33,15 @@ nav ul li a:hover {
   background-color: black;
   margin: 5px 0;
 }
+
 ul {
-  list-style-type: none; /* Remove default list styles */
-  text-align: center; /* Center the list items horizontally */
+  list-style-type: none;
+  text-align: center;
 }
 
 ul li {
-  display: inline-block; /* Display list items as blocks */
-  margin-right: 40px; /* Add more spacing between list items (adjust as needed) */
+  display: inline-block;
+  margin-right: 40px;
 }
 
 .nav-links {
@@ -62,7 +63,7 @@ ul li {
   transition: all 0.3s ease-in-out;
 }
 
-/* header section */
+/* Header Section */
 
 .header {
   background-color: #495e57;
@@ -78,12 +79,12 @@ ul li {
 h1 {
   color: #f4ce14;
   font-size: 50px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: serif;
 }
 
 h2 {
   font-size: 30px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: serif;
 }
 
 .banner p {
@@ -91,7 +92,7 @@ h2 {
   max-width: 520px;
   line-height: 1.5;
   margin-bottom: 30px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: serif;
 }
 
 button {
@@ -104,7 +105,7 @@ button {
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: serif;
 }
 
 .banner-img {
@@ -139,6 +140,7 @@ label {
   margin-right: 20px;
   margin-bottom: 20px;
 }
+
 #book-date,
 #book-time,
 #book-guests,
@@ -157,14 +159,14 @@ label {
   color: #fff;
   border: none;
   border-radius: 4px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: serif;
 }
 
-.comfirm span {
+.confirm span {
   color: blue;
 }
 
-/* menu items */
+/* Menu Items */
 
 .menu-icon {
   display: none;
@@ -178,14 +180,14 @@ label {
 
 .menu-container h2 {
   color: #333333;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 35px;
+  font-family: serif;
+  font-size: 45px;
   font-weight: bold;
 }
 
 .menu-container h5 {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-top: 15px;
 }
 
@@ -195,6 +197,7 @@ label {
   align-items: center;
   flex-wrap: wrap-reverse;
 }
+
 .cards {
   margin-top: 30px;
   display: flex;
@@ -202,11 +205,11 @@ label {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem 1rem;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: serif;
+  font-size: 1.3em;
 }
 
 .menu-items {
-  /* height: 400px; */
   width: 350px;
   background: #edefee;
   border-radius: 10px;
@@ -225,16 +228,24 @@ label {
 .menu-content .heading {
   display: flex;
   justify-content: space-between;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: serif;
 }
 
 .orderbtn {
-  padding: 5px 12px;
-  margin-bottom: 20px;
+  padding: 10px 25px;
+  margin-bottom: 10px;
   font-size: 16px;
   font-weight: 600;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: serif;
+  background-color: #495e57;
+  color: #edefee;
 }
+
+.orderbtn:hover {
+  background-color: #f4ce14;
+}
+
+/* Footer Section */
 
 footer section {
   background-color: #495e57;
@@ -259,6 +270,7 @@ footer h3 {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #edefee;
 }
+
 footer p {
   color: #edefee;
 }
@@ -285,6 +297,7 @@ footer section {
 footer section > div {
   align-content: center;
 }
+
 .footer-copyright {
   text-align: center;
   background-color: #495e57;
@@ -293,7 +306,6 @@ footer section > div {
 
 /* Testing Form Styles */
 
-/* Add this CSS to your stylesheet */
 .booking header {
   background-color: #edefee;
   padding: 10px;
@@ -306,10 +318,12 @@ footer section > div {
 }
 
 form {
+  max-width: 600px;
+  margin: 0 auto;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 15px;
+  padding: 20px 2%;
 }
 
 fieldset {
@@ -324,6 +338,7 @@ label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
+  font-size: 23px;
 }
 
 input,
@@ -350,7 +365,8 @@ select {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .btnReceive input:hover {

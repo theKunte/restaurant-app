@@ -44,6 +44,8 @@ function BookingForm(props) {
     <header>
       <section>
         <form onSubmit={handleSubmit}>
+          <h2>Reservation From:</h2>
+          <br />
           <fieldset>
             {/* Name */}
             <div>
@@ -60,7 +62,7 @@ function BookingForm(props) {
 
             {/*Email */}
             <div>
-              <label htmlFor="book-email">Email:</label>
+              <label htmlFor="book-email">Email:*</label>
               <input
                 id="book-email"
                 type="email"
@@ -71,7 +73,7 @@ function BookingForm(props) {
             </div>
             {/* DATE */}
             <div>
-              <label htmlFor="book-date">Choose Date</label>
+              <label htmlFor="book-date">Choose Date:*</label>
               <input
                 id="book-date"
                 value={date}
@@ -82,7 +84,7 @@ function BookingForm(props) {
             </div>
             {/* TIME */}
             <div>
-              <label htmlFor="book-time">Choose Time:</label>
+              <label htmlFor="book-time">Choose Time:*</label>
               <select
                 id="book-time"
                 value={times}
@@ -100,7 +102,7 @@ function BookingForm(props) {
             </div>
             {/* GUESTS */}
             <div>
-              <label htmlFor="book-guest">Number of Guests</label>
+              <label htmlFor="book-guest">Number of Guests: *</label>
               <input
                 id="book-guest"
                 value={guest}
@@ -120,8 +122,10 @@ function BookingForm(props) {
                 value={occasion}
                 onChange={(e) => setOccasion(e.target.value)}
               >
+                <option></option>
                 <option>Birthday</option>
                 <option>Anniversary</option>
+                <option>Business</option>
               </select>
             </div>
             <div className="btnReceive">
