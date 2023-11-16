@@ -243,6 +243,7 @@ label {
 
 .orderbtn:hover {
   background-color: #f4ce14;
+  color: #333333;
 }
 
 /* Footer Section */
@@ -258,14 +259,15 @@ footer section {
 .company-info img {
   margin-top: 12px;
   cursor: pointer;
-  width: 200px;
+  width: 120px;
 }
 
 .company-info p {
-  width: 420px;
+  width: 320px;
 }
 
 footer h3 {
+  text-align: center;
   font-size: 18px;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #edefee;
@@ -275,13 +277,11 @@ footer p {
   color: #edefee;
 }
 
-footer ul {
-  padding: 0;
-}
-
 footer ul li {
-  padding: 8px 2%;
+  padding: 0 10px;
   color: #edefee;
+  font-size: 1.1rem;
+  margin: 10px;
 }
 
 .footer-ul {

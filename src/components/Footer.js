@@ -20,28 +20,16 @@ function Footer() {
         <div>
           <h3>HOURS</h3>
           <ul className="footer-ul">
-            <li>
-              Hours:
-              <br />
-              Tuesday-Sunday: 3:00PM-10:00PM
-            </li>
+            <li>Tuesday-Sunday: 3:00PM-10:00PM</li>
           </ul>
         </div>
 
         <div>
           <h3>CONTACT</h3>
           <ul className="footer-ul">
-            <li>
-              Address: <br /> 1st Ave Seattle, WA
-            </li>
-            <li>
-              Phone: <br /> +206 124 4320
-            </li>
-            <li>
-              Email:
-              <br />
-              littlelemon@lemon.com
-            </li>
+            <li>Address: 1st Ave Seattle, WA</li>
+            <li>Phone: +206 124 4320</li>
+            <li>Email: littlelemon@lemon.com</li>
           </ul>
         </div>
 
@@ -66,11 +54,10 @@ function Footer() {
           </ul>
         </div>
       </section>
-      <div>
-        <p className="footer-copyright">
-          © 2023 Little Lemon Ltd. All rights reserved.
-        </p>
-      </div>
+      <p className="footer-copyright">
+        © 2023 Little Lemon Ltd. All rights reserved.
+      </p>
+      <div></div>
     </footer>
   );
 }
