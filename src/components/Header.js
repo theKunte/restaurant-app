@@ -9,9 +9,12 @@ function Header() {
           <h1>Little Lemon</h1>
           <h2>Seattle</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud
+            Welcome to Little Lemin, where every meal is a burst of sunshine!
+            Our restaurant brings you the freshest flavors and vibrant dishes,
+            all infused with a touch of citrus magic. Whether you're here for a
+            hearty breakfast, a leisurely lunch, or a delightful dinner, you'll
+            find a menu crafted to brighten your day and tantalize your taste
+            buds.
           </p>
           <Link to="/booking">
             <button aria-label="On Click">Reserve Table</button>
